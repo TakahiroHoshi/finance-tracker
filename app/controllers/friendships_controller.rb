@@ -4,7 +4,7 @@ class FriendshipsController < ApplicationController
     @friendship.destroy
     respond_to do |format|
       format.html {redirect_to my_friends_path, notice: "Friend was successfully removed"}
-      
+    end      
   end
 
 end
