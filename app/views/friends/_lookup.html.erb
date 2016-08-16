@@ -16,7 +16,7 @@
   <%= render 'common/spinner' %>
 
   <% if @users %>
-    <% if @user.size > 0 %>
+    <% if @users.size > 0 %>
       <h3>Search Results</h3>
         <div id="friend-lookup-results" class="well results-block col-md-10">
         <table class="search-results-table col-md-12">
@@ -28,7 +28,7 @@
                 <td>
                   <strong>Profile:</strong> <%= link_to "View Profile", user_path(user), class: 'btn btn-xs btn-success' %>
                   <% if current_user.not_friends_with?(user.id) %>
-                    <%= link_to "Add as my friend", add_friend_path(user: current_user, frined: user), class: 'btn btn-xs btn-success', method: :post %>
+                    <%= link_to "Add as my friend", add_friend_path(user: current_user, friend: user), class: 'btn btn-xs btn-success', method: :post %>
                   <% else %>
                     <span class="label label-primary">Already friend</span>
                   <% end %>
